@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a816f4fdc18023c8722f12bfd400bfe0",
+    "revision": "25172639db7db773fb55d6c33ef24003",
     "url": "/linden-it/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/linden-it/static/js/2.4fbd4b4f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a55420fbc4c682b05bd9",
-    "url": "/linden-it/static/js/main.c3ab4503.chunk.js"
+    "revision": "6a80247887ff5302ede2",
+    "url": "/linden-it/static/js/main.0557f766.chunk.js"
   },
   {
     "revision": "612d0b20cd8266295217",
