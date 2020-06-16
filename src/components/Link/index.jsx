@@ -1,7 +1,8 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { colors } from '../../GlobalStyle.js';
-
-export const StyledPrimaryButton = styled.button`
+import { colors } from '../../GlobalStyle';
+export const StyledLink = styled(Link)`
 	background-color: ${colors.primary};
 	border: 2px solid ${colors.primary};
 	color: white;
@@ -12,6 +13,7 @@ export const StyledPrimaryButton = styled.button`
 	text-decoration: none;
 	padding: 0 64px;
 	cursor: pointer;
+	display: inline-block;
 
 	:hover {
 		background-color: ${colors.light};
@@ -25,7 +27,7 @@ export const StyledPrimaryButton = styled.button`
 	}
 `;
 
-export const StyledSecondaryButton = styled(StyledPrimaryButton)`
+export const StyledSecondaryLink = styled(StyledLink)`
 	background-color: ${colors.light};
 	color: ${colors.primary};
 
@@ -34,3 +36,8 @@ export const StyledSecondaryButton = styled(StyledPrimaryButton)`
 		color: ${colors.light};
 	}
 `;
+
+// eslint-disable-next-line react/display-name
+export default (props) => {
+	return <StyledLink {...props} />;
+};

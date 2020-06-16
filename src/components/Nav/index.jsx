@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-import { FiHome, FiSettings } from "react-icons/fi";
-import { RiBookLine } from "react-icons/ri";
-import { FaRegCalendar } from "react-icons/fa";
+import React from 'react';
+
+import styled from 'styled-components';
+import { colors } from '../../GlobalStyle.js';
+import { NavLink } from 'react-router-dom';
+import { FiHome, FiSettings, FiBook, FiCalendar } from 'react-icons/fi';
 
 const Tab = styled.div`
 	display: flex;
@@ -18,13 +18,13 @@ const Tab = styled.div`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		color: var(--color-gray);
+		color: ${colors.gray};
 		text-decoration: none;
 		padding: 3px 0;
 		font-size: 12px;
 
 		&.active {
-			color: var(--color-primary);
+			color: ${colors.primary};
 		}
 		.react-icons {
 			font-size: 24px;
@@ -32,27 +32,31 @@ const Tab = styled.div`
 	}
 `;
 
-export default class Nav extends Component {
-	render() {
-		return (
-			<Tab>
-				<NavLink exact to='/'>
-					<FiHome className='react-icons' />
-					<span>Home</span>
-				</NavLink>
-				<NavLink to='/courses'>
-					<RiBookLine className='react-icons' />
-					<span>Courses</span>
-				</NavLink>
-				<NavLink to='/agenda'>
-					<FaRegCalendar className='react-icons' />
-					<span>Agenda</span>
-				</NavLink>
-				<NavLink to='/settings'>
-					<FiSettings className='react-icons' />
-					<span>Settings</span>
-				</NavLink>
-			</Tab>
-		);
-	}
-}
+export const Nav = () => {
+	return (
+		<Tab>
+			<NavLink exact to='/'>
+				<FiHome className='react-icons' />
+				<span>Home</span>
+			</NavLink>
+			<NavLink to='/courses'>
+				<FiBook className='react-icons' />
+				<span>Cursussen</span>
+			</NavLink>
+			<NavLink to='/agenda'>
+				<FiCalendar className='react-icons' />
+				<span>Agenda</span>
+			</NavLink>
+			<NavLink to='/settings'>
+				<FiSettings className='react-icons' />
+				<span>Instellingen</span>
+			</NavLink>
+		</Tab>
+	);
+};
+
+// Do not understand which propTypes have to be here? Because see Ln.34
+// Nav.propTypes = {
+// 	children: PropTypes.object
+// };
+export default Nav;

@@ -1,57 +1,62 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import GlobalStyle from "./GlobalStyle";
-import Nav from "./components/Nav";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Courses from "./pages/Courses";
-import {courses} from "./data.js";
-import Agenda from "./pages/Agenda";
-import Settings from "./pages/Settings";
-import Login from "./pages/Login";
+import React from 'react';
+import { HashRouter, Switch, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import PrivateRoute from './pages/PrivateRoute';
+import GlobalStyle from './GlobalStyle';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Courses from './pages/Courses';
+import Course from './pages/Course';
+import Agenda from './pages/Agenda';
+import Settings from './pages/Settings';
+import Login from './pages/Login';
+import ResetPassword from './pages/ResetPassword';
 
 const App = () => {
 	return (
-		<Router>
-			<GlobalStyle />
+		<HashRouter>
 			<Switch>
-				<Route 
-				name='login' 
-				path='/login' 
-				component={Login}
-				/>
-				
-				<Route 
-				name='home' 
-				exact path='/' 
-				component={Home}
-				/>
+				<Route name='login' path='/login' component={Login} />
 
 				<Route
-				name='courses'
-				path='/courses'
-				component={Courses}
-				courses={courses}
+					name='reset-password'
+					path='/reset-password'
+					component={ResetPassword}
 				/>
 
-				<Route 
-				name='agenda' 
-				path='/agenda' 
-				component={Agenda} 
-				/>
+				<PrivateRoute name='home' exact path='/' component={Home} />
 
-				<Route 
-				name='settings' 
-				path='/settings' 
-				component={Settings} 
+				<PrivateRoute
+					name='courses'
+					exact
+					path='/courses'
+					component={Courses}
+				/>
+				<PrivateRoute
+					name='courses'
+					exact
+					path='/courses/:id'
+					component={Course}
+				/>
+				<PrivateRoute name='agenda' path='/agenda' component={Agenda} />
+
+				<PrivateRoute
+					name='settings'
+					path='/settings'
+					component={Settings}
 				/>
 			</Switch>
-			
+
 			<Footer>
 				<Nav />
 			</Footer>
-		</Router>
+			<GlobalStyle />
+		</HashRouter>
 	);
 };
-
+App.propTypes = {
+	context: PropTypes.any,
+	history: PropTypes.any,
+};
 export default App;

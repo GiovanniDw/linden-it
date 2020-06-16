@@ -1,14 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import StyledHeading from './StyledHeading.js';
 
-import StyledHeading from './StyledHeading.js'
-class Title extends Component {
-	render() {
-		return (
-			<StyledHeading>
-				{this.props.title}
-			</StyledHeading>
-		);
-	}
-}
+export const Title = ({ title }) => {
+	return (
+		<StyledHeading>
+			{title}
+		</StyledHeading>
+	);
+};
+
+Title.propTypes = {
+	title: PropTypes.string
+};
 
 export default Title;

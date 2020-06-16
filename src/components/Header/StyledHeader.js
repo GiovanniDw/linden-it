@@ -1,12 +1,13 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { colors } from '../../GlobalStyle.js';
 
 const StyledHeader = styled.header`
-	
-	background-color: var(--color-primary);
-	color: var(--color-light);
+	background-color: ${colors.primary};
+	color: ${colors.light};
+
 	.header-toolbar {
 		min-height: 50px;
 		position: sticky;
 	}
 `;
-export default StyledHeader
+export default StyledHeader;

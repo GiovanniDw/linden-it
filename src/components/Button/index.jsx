@@ -1,18 +1,36 @@
-import React from 'react'
-import { StyledBaseButton, StyledLoginButton } from './StyledButton'
+import React from 'react';
+import { StyledPrimaryButton, StyledSecondaryButton } from './StyledButton';
+import PropTypes from 'prop-types';
 
-export const BaseButton = ({ onClick, label }) => {
+
+export const PrimaryButton = ({ onClick, label, disabled }) => {
 	return (
-		<StyledBaseButton onClick={onClick}>
+		<StyledPrimaryButton 
+			onClick={onClick} 
+			label={label}
+			disabled={disabled}>
 			{label}
-		</StyledBaseButton>
+		</StyledPrimaryButton>
 	);
 };
 
-export const LoginButton = ({ onClick, label }) => {
+PrimaryButton.propTypes = {
+	disabled: PropTypes.any,
+	label: PropTypes.string,
+	onClick: PropTypes.func,
+};
+
+export const SecondaryButton = ({ onClick, label, disabled }) => {
 	return (
-		<StyledLoginButton onClick={onClick}>
+		<StyledSecondaryButton onClick={onClick} disabled={disabled}>
 			{label}
-		</StyledLoginButton>
+		</StyledSecondaryButton>
 	);
 };
+
+SecondaryButton.propTypes = {
+	disabled: PropTypes.any,
+	label: PropTypes.string,
+	onClick: PropTypes.func,
+};
+
