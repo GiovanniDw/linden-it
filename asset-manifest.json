@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/linden-it/static/js/main.64d8d80c.chunk.js",
-    "main.js.map": "/linden-it/static/js/main.64d8d80c.chunk.js.map",
+    "main.js": "/linden-it/static/js/main.b40ad5af.chunk.js",
+    "main.js.map": "/linden-it/static/js/main.b40ad5af.chunk.js.map",
     "runtime-main.js": "/linden-it/static/js/runtime-main.ce3c243c.js",
     "runtime-main.js.map": "/linden-it/static/js/runtime-main.ce3c243c.js.map",
-    "static/js/2.8cbe246d.chunk.js": "/linden-it/static/js/2.8cbe246d.chunk.js",
-    "static/js/2.8cbe246d.chunk.js.map": "/linden-it/static/js/2.8cbe246d.chunk.js.map",
+    "static/js/2.e4868060.chunk.js": "/linden-it/static/js/2.e4868060.chunk.js",
+    "static/js/2.e4868060.chunk.js.map": "/linden-it/static/js/2.e4868060.chunk.js.map",
     "index.html": "/linden-it/index.html",
-    "precache-manifest.11e964e96bf556f8bd52b30dceb42e92.js": "/linden-it/precache-manifest.11e964e96bf556f8bd52b30dceb42e92.js",
+    "precache-manifest.bba17debf8aa9c6ca13b2befc3d6933a.js": "/linden-it/precache-manifest.bba17debf8aa9c6ca13b2befc3d6933a.js",
     "service-worker.js": "/linden-it/service-worker.js",
-    "static/js/2.8cbe246d.chunk.js.LICENSE.txt": "/linden-it/static/js/2.8cbe246d.chunk.js.LICENSE.txt"
+    "static/js/2.e4868060.chunk.js.LICENSE.txt": "/linden-it/static/js/2.e4868060.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ce3c243c.js",
-    "static/js/2.8cbe246d.chunk.js",
-    "static/js/main.64d8d80c.chunk.js"
+    "static/js/2.e4868060.chunk.js",
+    "static/js/main.b40ad5af.chunk.js"
   ]
 }
