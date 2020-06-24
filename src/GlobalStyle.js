@@ -107,6 +107,8 @@ const GlobalStyle = createGlobalStyle`
         top: 0;
         width: 100%;
        z-index: 2;
+       padding-left: 16px;
+        padding-right: 16px;
         padding-left: max(16px, env(safe-area-inset-left));
         padding-right: max(16px, env(safe-area-inset-right));
         padding-top: max(0px, env(safe-area-inset-top)); 	
@@ -114,6 +116,8 @@ const GlobalStyle = createGlobalStyle`
         
     }
     main {
+        padding-left: 16px;
+        padding-right: 16px;
         padding-left: min(16px, env(safe-area-inset-left));
         padding-right: min(16px, env(safe-area-inset-right));
         position:relative;
