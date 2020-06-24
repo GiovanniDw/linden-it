@@ -1,14 +1,14 @@
 import React from 'react';
-
 import styled from 'styled-components';
 import { colors } from '../../GlobalStyle.js';
 import { NavLink } from 'react-router-dom';
 import { FiHome, FiSettings, FiBook, FiCalendar } from 'react-icons/fi';
 
+// Tab component styling
 const Tab = styled.div`
 	display: flex;
 	justify-content: space-between;
-	width: 100vw;
+	width: 100%;
 	box-sizing: border-box;
 	a {
 		flex-grow: 1;
@@ -20,7 +20,7 @@ const Tab = styled.div`
 		align-items: center;
 		color: ${colors.gray};
 		text-decoration: none;
-		padding: 3px 0;
+		padding: 0;
 		font-size: 12px;
 
 		&.active {
@@ -32,6 +32,7 @@ const Tab = styled.div`
 	}
 `;
 
+// Export Tab component
 export const Nav = () => {
 	return (
 		<Tab>

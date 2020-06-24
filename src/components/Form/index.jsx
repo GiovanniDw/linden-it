@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyledBaseTextInput, StyledBaseNumberInput} from './StyledInput';
+import { StyledBaseTextInput, StyledBaseNumberInput, StyledBaseTimeInput, StyledBaseDateInput } from './StyledInput';
 
 
 /**
@@ -24,10 +24,12 @@ export function BaseTextInput ({ name, placeholder, value, onChange, type, child
 	);
 }
 
+// Default props Base Text Input
 BaseTextInput.defaultProps = {
 	type: 'text'
 };
 
+// Proptypes Base Text Input
 BaseTextInput.propTypes = {
 	children: PropTypes.any,
 	className: PropTypes.string,
@@ -38,6 +40,7 @@ BaseTextInput.propTypes = {
 	value: PropTypes.any,
 };
 
+// Export Base Number Input
 export const BaseNumberInput = ({ name, placeholder, value, onChange, type, children }) => {
 	return (
 		<StyledBaseNumberInput
@@ -51,6 +54,7 @@ export const BaseNumberInput = ({ name, placeholder, value, onChange, type, chil
 	);
 };
 
+// PropTypes Base Number Input
 BaseNumberInput.propTypes = {
 	children: PropTypes.any,
 	className: PropTypes.string,
@@ -61,35 +65,60 @@ BaseNumberInput.propTypes = {
 	value: PropTypes.any,
 };
 
+// Export Base Time Input
+export const BaseTimeInput = ({ name, placeholder, value, onChange, type, children }) => {
+	return (
+		<StyledBaseTimeInput
+			value={value}
+			placeholder={placeholder}
+			name={name}
+			type={type}
+			onChange={onChange}>
+			{children}
+		</StyledBaseTimeInput>
+	);
+};
 
+// Default props Base Time Input
+BaseTimeInput.defaultProps = {
+	type: 'time'
+};
 
+// PropTypes Base Time Input
+BaseTimeInput.propTypes = {
+	name: PropTypes.string,
+	placeholder: PropTypes.string,
+	type: PropTypes.string.isRequired,
+	className: PropTypes.string,
+	value: PropTypes.any,
+	onChange: PropTypes.func,
+};
 
-// const FormInput = ({
-//   name,
-//   type,
-//   placeholder,
-//   onChange,
-//   className,
-//   value,
-//   error,
-//   children,
-//   label,
-//   ...props
-// }) => {
-//   return (
-//     // <StyledInput>
-//     <React.Fragment>
-//       <label htmlFor={name}>{label}</label>
-//       <input
-//         id={name}
-//         name={name}
-//         type={type}
-//         placeholder={placeholder}
-//         onChange={onChange}
-//         value={value}
-//         className={className}
-//       />
-//     </React.Fragment>
-//     // </StyledInput>
-//   );
-// };
+// Export Base Date Input
+export const BaseDateInput = ({ name, placeholder, value, onChange, type, children }) => {
+	return (
+		<StyledBaseDateInput
+			value={value}
+			placeholder={placeholder}
+			name={name}
+			type={type}
+			onChange={onChange}>
+			{children}
+		</StyledBaseDateInput>
+	);
+};
+
+// Default Props Base Date Input
+BaseDateInput.defaultProps = {
+	type: 'time'
+};
+
+// PropTypes Base Date Input
+BaseDateInput.propTypes = {
+	name: PropTypes.string,
+	placeholder: PropTypes.string,
+	type: PropTypes.string.isRequired,
+	className: PropTypes.string,
+	value: PropTypes.any,
+	onChange: PropTypes.func,
+};
